@@ -64,6 +64,38 @@ const cards = [  //stores card images as objects
     name: "mushroom",
     image: "images/mushroom.png",
   },
+  {
+    name: "butterfly",
+    image: "images/butterfly.png",
+  },
+  {
+    name: "bee",
+    image: "images/bee.png",
+  },
+  {
+    name: "dragonfly",
+    image: "images/dragonfly.png",
+  },
+  {
+    name: "flower",
+    image: "images/flower.png",
+  },
+  {
+    name: "hive",
+    image: "images/hive.png",
+  },
+  {
+    name: "lilypad",
+    image: "images/lilypad.png",
+  },
+  {
+    name: "tree",
+    image: "images/tree.png",
+  },
+  {
+    name: "mushroom",
+    image: "images/mushroom.png",
+  }
 ];
 
 cards.sort(() => 0.5 - Math.random()); //sorts the cards in a random order 
