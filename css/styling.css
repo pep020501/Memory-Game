@@ -1,0 +1,29 @@
+
+* {
+    padding: 0; 
+    margin: 20px;
+    box-sizing: border-box;
+    --background-color: #000000;
+    --font-color: #ffff;
+}
+
+body {
+    background-color: var(--background-color);   
+}
+
+h2 {
+  font-size: 30px;
+  color: var(--font-color);
+}
+
+#grid {
+  border: var(--font-color) solid 1px; 
+}
+
+img { 
+  height: 130px;
+  width: 130px;
+  margin-left: 5px;
+
+  
+}
