@@ -120,7 +120,7 @@ gridBoard();
 function Match(){
 let displayMessage;
 let displayScore = 0;
-const option1 = chosenCardsID[0]; //three selected cards 
+const option1 = chosenCardsID[0]; //three selected card ids
 const option2 = chosenCardsID[1];
 const option3 = chosenCardsID[2];
 
@@ -155,7 +155,7 @@ const cardID = this.getAttribute("data-id"); //retrieve the id of the chosen car
 chosenCards.push(cards[cardID].name); //pushes the card into "chosenCards" array 
 chosenCardsID.push(cardID); //pushes the card id into "chosenCardsID" array
 this.setAttribute("src", cards[cardID].image); //flips the card over to reveal its image 
-if(chosenCards.length === 3){ 
+if(chosenCardsID.length === 3){ 
 setTimeout(Match, 200); //delays execution of given function by 200 milliseconds once three cards are selected
 }
 
