@@ -143,7 +143,7 @@ const cards = document.querySelectorAll("img");
      cards[option3].setAttribute("src", "images/card-back.png");
    }
   
-   chosenCardsID = []; //reset both arrays to ensure they are empty prior to the next turn 
+   chosenCardsID = []; //reset both selected card arrays to ensure they are empty prior to the next turn 
    chosenCards = [];
    matchDisplay.innerHTML = displayMessage;
    
