@@ -1,7 +1,10 @@
 
 * {
     padding: 0; 
-    margin: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     box-sizing: border-box;
     --background-color: #000000;
     --font-color: #ffff;
@@ -11,9 +14,23 @@ body {
     background-color: var(--background-color);   
 }
 
-h2 {
-  font-size: 30px;
+.header {
+  display: flex;
+  flex-direction: row;
   color: var(--font-color);
+  gap: 850px;
+  
+  
+}
+
+.header h2, #score  {
+  font-size: 30px;
+  
+}
+
+.header #matchDisplay {
+  font-size: 25px;
+  
 }
 
 #grid {
