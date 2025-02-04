@@ -103,6 +103,9 @@ let chosenCards = []; //empty array where chosen cards will be pushed into
 let chosenCardsID = []; //empty array where the id of the cards from the previous array will be pushed into
 const gridDisplay = document.getElementById("grid"); 
 const matchDisplay = document.getElementById("matchDisplay");
+const scoreDisplay = document.getElementById("score");
+let displayScore = 0;
+let displayMessage;
 
 
 function gridBoard(){
@@ -118,8 +121,6 @@ function gridBoard(){
 gridBoard(); 
 
 function Match(){
-let displayMessage;
-let displayScore = 0;
 const option1 = chosenCardsID[0]; //three selected card ids
 const option2 = chosenCardsID[1];
 const option3 = chosenCardsID[2];
@@ -128,16 +129,17 @@ const cards = document.querySelectorAll("img");
 
  if((chosenCards[0] == chosenCards[1]) && (chosenCards[0] == chosenCards[2])){ //checks if selected cards are equal 
    displayMessage = "You got a match!";
+   displayScore++;
    cards[option1].setAttribute("src", "images/matched.png"); //checks off the card to indicate it's been matched 
    cards[option2].setAttribute("src", "images/matched.png");
-   cards[option3].setAttribute("src", "images/matches.png");
+   cards[option3].setAttribute("src", "images/matched.png");
    cards[option1].removeEventListener('click', flip); //removes event listener so card can't be selected again
    cards[option2].removeEventListener('click', flip);
    cards[option3].removeEventListener('click', flip); 
    
    }
    else {
-    displayMessage = "No match.";
+     displayMessage = "No match.";
      cards[option1].setAttribute("src", "images/card-back.png"); //flips the card back over 
      cards[option2].setAttribute("src", "images/card-back.png");
      cards[option3].setAttribute("src", "images/card-back.png");
@@ -146,6 +148,7 @@ const cards = document.querySelectorAll("img");
    chosenCardsID = []; //reset both selected card arrays to ensure they are empty prior to the next turn 
    chosenCards = [];
    matchDisplay.innerHTML = displayMessage;
+   scoreDisplay.innerHTML = displayScore;
    
 
 }
