@@ -129,7 +129,7 @@ const cards = document.querySelectorAll("img");
 
  if((chosenCards[0] == chosenCards[1]) && (chosenCards[0] == chosenCards[2])){ //checks if selected cards are equal 
    displayMessage = "You got a match!";
-   displayScore++;
+   displayScore++; //increment score by 1 each time a match is found 
    cards[option1].setAttribute("src", "images/matched.png"); //checks off the card to indicate it's been matched 
    cards[option2].setAttribute("src", "images/matched.png");
    cards[option3].setAttribute("src", "images/matched.png");
