@@ -70,18 +70,18 @@ img {
   }
 
   .header {
-   gap: 15px;
-   margin-bottom: 30px;
+   gap: 25px;
+   margin-bottom: 5px;
 
   }
 
   .header h2, #score {
-    margin-left: 0;
-   font-size: 15px;
+   margin-left: 10px;
+   font-size: 12px;
   }
 
   .header #matchDisplay {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   img {
