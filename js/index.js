@@ -149,12 +149,16 @@ function Match(){
   chosenCards = [];
   matchDisplay.innerHTML = displayMessage;
   scoreDisplay.innerHTML = displayScore;
+  if(displayScore == cards.length/3){
+    alert("Congratulations! You finished the game!");
+  }
 }
 
 function flip(){
 const cardID = this.getAttribute("data-id"); //retrieve the id of the chosen card 
-if(chosenCards.includes(cards[cardID].name)){ //checks if id of chosen card already exists in the chosenCard array
+if(chosenCardsID.includes(cardID)){ //checks if id of chosen card already exists in the chosenCard array
  alert("Card already clicked."); 
+ return;
 }
 chosenCards.push(cards[cardID].name); //pushes the card into "chosenCards" array 
 chosenCardsID.push(cardID); //pushes the card id into "chosenCardsID" array
